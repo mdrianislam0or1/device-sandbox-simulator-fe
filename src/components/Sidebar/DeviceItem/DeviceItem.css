@@ -1,0 +1,41 @@
+.device-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #364153;
+  background-color: #1e2939;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.device-item--active {
+  background-color: #646f7f;
+  border-color: #364153;
+}
+
+.device-item__indicator {
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+}
+
+.device-item__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.device-item__name {
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}

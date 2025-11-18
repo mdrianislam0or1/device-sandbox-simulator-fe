@@ -1,0 +1,61 @@
+.light-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.light-visual__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(96px);
+  transition: all 0.3s ease;
+}
+
+.light-visual__holder {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.light-visual__cap {
+  display: block;
+}
+
+.light-visual__cap--top {
+  width: 64px;
+  height: 12px;
+}
+
+.light-visual__cap--bottom {
+  width: 80px;
+  height: 16px;
+  margin-top: 0;
+}
+
+.light-visual__bulb {
+  position: relative;
+  width: 128px;
+  height: 160px;
+  top: 22px;
+  border-radius: 9999px;
+  padding: 32px 48px 32px 32px;
+  transition: all 0.3s ease;
+}
+
+.light-visual__filament {
+  position: absolute;
+  width: 4px;
+  height: 64px;
+  top: 48px;
+  left: 62px;
+  border-radius: 16777200px;
+  opacity: 1;
+}
