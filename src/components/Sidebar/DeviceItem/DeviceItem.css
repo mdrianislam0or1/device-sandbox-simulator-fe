@@ -9,6 +9,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   position: relative;
+  min-width: fit-content;
 }
 
 .device-item--active {
@@ -30,6 +31,7 @@
 .device-item__icon {
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
 }
 
 .device-item__name {
@@ -38,4 +40,47 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+@media (max-width: 639px) {
+  .device-item {
+    gap: 8px;
+    padding: 10px 12px;
+    min-width: 140px;
+    flex-shrink: 0;
+  }
+
+  .device-item__indicator {
+    left: -10px;
+    width: 6px;
+    height: 6px;
+  }
+
+  .device-item__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .device-item__name {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .device-item {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .device-item__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .device-item__name {
+    font-size: 14px;
+    letter-spacing: 0.4px;
+  }
 }
