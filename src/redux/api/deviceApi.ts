@@ -50,7 +50,7 @@ export const deviceApi = createApi({
       query: id => `?resource=devices&id=${id}`,
       transformResponse: (response: ApiResponse<DeviceApiData>) =>
         transformDeviceFromApi(response.data),
-      providesTags: (result, error, id) => [{ type: 'Device', id }],
+      providesTags: (_result, _error, id) => [{ type: 'Device', id }],
     }),
 
     //get all presets
@@ -72,7 +72,7 @@ export const deviceApi = createApi({
       query: id => `?resource=presets&id=${id}`,
       transformResponse: (response: ApiResponse<PresetApiData>) =>
         transformPresetFromApi(response.data),
-      providesTags: (result, error, id) => [{ type: 'Preset', id }],
+      providesTags: (_result, _error, id) => [{ type: 'Preset', id }],
     }),
 
     //create preset

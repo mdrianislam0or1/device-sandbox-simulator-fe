@@ -116,23 +116,23 @@ export const TestingCanvas = () => {
       <div className="testing-canvas__header">
         <h2 className="testing-canvas__title">Testing Canvas</h2>
 
-        <div className="testing-canvas__buttons">
-          <button
-            onClick={handleClearCanvas}
-            disabled={canvasDevices.length === 0}
-            className="testing-canvas__btn testing-canvas__btn--clear"
-          >
-            Clear
-          </button>
+        {canvasDevices.length > 0 && (
+          <div className="testing-canvas__buttons">
+            <button
+              onClick={handleClearCanvas}
+              className="testing-canvas__btn testing-canvas__btn--clear"
+            >
+              Clear
+            </button>
 
-          <button
-            onClick={() => setShowSaveModal(true)}
-            disabled={canvasDevices.length === 0}
-            className="testing-canvas__btn testing-canvas__btn--save"
-          >
-            Save Preset
-          </button>
-        </div>
+            <button
+              onClick={() => setShowSaveModal(true)}
+              className="testing-canvas__btn testing-canvas__btn--save"
+            >
+              Save Preset
+            </button>
+          </div>
+        )}
       </div>
 
       <div className="testing-canvas__container">
